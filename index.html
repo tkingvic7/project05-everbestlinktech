@@ -153,12 +153,14 @@
       to   { transform: rotate(360deg); }
     }
 
-    /* Hero container — fill the dark left area, not the global centered container */
+    /* Hero container — fill the dark left area, centered within it */
     #hero > .container {
       max-width: none;
       width: 52%;
       margin: 0;
-      padding: 0 clamp(28px, 5vw, 80px);
+      padding: 0 clamp(20px, 3vw, 48px);
+      display: flex;
+      justify-content: center;
     }
 
     /* Hero left content */
