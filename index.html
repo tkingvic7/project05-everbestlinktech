@@ -342,13 +342,12 @@
     .service-card:hover { border-color: rgba(124,58,237,0.3); box-shadow: 0 8px 32px rgba(124,58,237,0.08); }
     .service-card:hover::before { transform: scaleY(1); }
     .service-icon {
-      width: 50px; height: 50px; background: var(--purple-lt);
-      border: 1.5px solid rgba(124,58,237,0.2);
+      width: 50px; height: 50px; background: var(--purple);
       display: flex; align-items: center; justify-content: center;
       margin-bottom: 22px; transition: background 0.3s;
     }
-    .service-card:hover .service-icon { background: rgba(124,58,237,0.18); }
-    .service-icon svg { width: 22px; height: 22px; color: var(--purple); }
+    .service-card:hover .service-icon { background: var(--purple-dk); }
+    .service-icon svg { width: 22px; height: 22px; color: #ffffff; }
     .service-name {
       font-family: 'Barlow Condensed', sans-serif; font-size: 22px;
       font-weight: 800; text-transform: uppercase; color: var(--text);
@@ -413,37 +412,40 @@
     .industry-card:hover .industry-name { color: var(--purple); }
 
     /* ─── WHY US ────────────────────────────────────────────── */
-    #why { padding: 110px 0; background: var(--bg); position: relative; overflow: hidden; }
-    .why-bg-text {
-      position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
-      font-family: 'Barlow Condensed', sans-serif; font-size: 220px;
-      font-weight: 900; text-transform: uppercase; color: rgba(124,58,237,0.03);
-      white-space: nowrap; pointer-events: none; user-select: none;
-    }
-    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-    .why-features { display: flex; flex-direction: column; gap: 2px; }
+    #why { padding: 110px 0; background: var(--bg); }
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .why-features { display: flex; flex-direction: column; gap: 16px; }
     .why-item {
-      display: flex; gap: 24px; padding: 28px 32px;
-      background: var(--bg-2); border: 1px solid rgba(124,58,237,0.08); transition: all 0.3s;
+      padding: 24px 28px; background: #ffffff;
+      border: 1.5px solid #ece8f8; transition: border-color 0.3s, box-shadow 0.3s;
+      position: relative;
     }
-    .why-item:hover { border-color: rgba(124,58,237,0.3); background: var(--bg-3); }
+    .why-item::before {
+      content: ''; position: absolute; top: 0; left: 0; bottom: 0;
+      width: 3px; background: var(--purple);
+      transform: scaleY(0); transform-origin: bottom; transition: transform 0.3s;
+    }
+    .why-item:hover { border-color: rgba(124,58,237,0.3); box-shadow: 0 6px 24px rgba(124,58,237,0.07); }
+    .why-item:hover::before { transform: scaleY(1); }
     .why-num {
-      font-family: 'Barlow Condensed', sans-serif; font-size: 36px;
-      font-weight: 900; color: var(--purple); opacity: 0.35; line-height: 1;
-      flex-shrink: 0; width: 40px;
+      font-family: 'Barlow Condensed', sans-serif; font-size: 11px;
+      font-weight: 700; letter-spacing: 3px; color: var(--purple);
+      display: block; margin-bottom: 6px;
     }
-    .why-title { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text); margin-bottom: 6px; }
-    .why-desc { font-size: 14px; color: var(--steel); line-height: 1.7; }
-    .why-visual { display: flex; flex-direction: column; gap: 2px; }
+    .why-title { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text); margin-bottom: 6px; }
+    .why-desc { font-size: 14px; color: var(--steel); line-height: 1.75; }
+    .why-visual { display: flex; flex-direction: column; gap: 16px; }
     .why-stat-card {
-      background: var(--bg-2); border: 1px solid rgba(124,58,237,0.08);
-      padding: 32px 36px; display: flex; align-items: center; gap: 24px;
+      background: #ffffff; border: 1.5px solid #ece8f8;
+      padding: 28px 32px; display: flex; align-items: center; gap: 24px;
     }
     .why-stat-card.highlight { background: var(--purple); border-color: var(--purple); }
     .why-stat-card.highlight .big-num { color: var(--white); }
     .why-stat-card.highlight .big-label { color: rgba(255,255,255,0.75); }
-    .big-num { font-family: 'Barlow Condensed', sans-serif; font-size: 56px; font-weight: 900; color: var(--purple); line-height: 1; flex-shrink: 0; }
-    .big-label { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--steel); }
+    .big-num { font-family: 'Barlow Condensed', sans-serif; font-size: 52px; font-weight: 900; color: var(--purple); line-height: 1; flex-shrink: 0; }
+    .big-label { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--steel); }
+    .why-cta-text { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 800; text-transform: uppercase; color: var(--text); line-height: 1.2; }
+    .why-stat-card .btn { margin-left: auto; padding: 12px 24px; font-size: 13px; }
 
     /* ─── CTA BANNER ────────────────────────────────────────── */
     #cta { padding: 100px 0; background: var(--purple); position: relative; overflow: hidden; }
@@ -876,7 +878,6 @@
 
   <!-- ── WHY US ──────────────────────────────────────────────── -->
   <section id="why">
-    <div class="why-bg-text">PRECISION</div>
     <div class="container">
       <div class="why-grid">
         <div>
@@ -886,31 +887,23 @@
           <div class="why-features">
             <div class="why-item">
               <div class="why-num">01</div>
-              <div>
-                <div class="why-title">Experienced Team</div>
-                <p class="why-desc">A strong and experienced team specialized in precision machining and moulding manufacturing across multiple critical industries.</p>
-              </div>
+              <div class="why-title">Experienced Team</div>
+              <p class="why-desc">A strong and experienced team specialized in precision machining and moulding manufacturing across multiple critical industries.</p>
             </div>
             <div class="why-item">
               <div class="why-num">02</div>
-              <div>
-                <div class="why-title">Advanced Equipment</div>
-                <p class="why-desc">State-of-the-art CNC and wire-cut machinery ensuring consistent dimensional accuracy on every production run.</p>
-              </div>
+              <div class="why-title">Advanced Equipment</div>
+              <p class="why-desc">State-of-the-art CNC and wire-cut machinery ensuring consistent dimensional accuracy on every production run.</p>
             </div>
             <div class="why-item">
               <div class="why-num">03</div>
-              <div>
-                <div class="why-title">Regional Coverage</div>
-                <p class="why-desc">Serving Kulim, Bukit Mertajam, Butterworth, Prai, Penang and Kedah — fast turnaround and local support you can rely on.</p>
-              </div>
+              <div class="why-title">Regional Coverage</div>
+              <p class="why-desc">Serving Kulim, Bukit Mertajam, Butterworth, Prai, Penang and Kedah — fast turnaround and local support you can rely on.</p>
             </div>
             <div class="why-item">
               <div class="why-num">04</div>
-              <div>
-                <div class="why-title">End-to-End Solutions</div>
-                <p class="why-desc">From mould design to final inspection, we handle every stage of the manufacturing process under one roof.</p>
-              </div>
+              <div class="why-title">End-to-End Solutions</div>
+              <p class="why-desc">From mould design to final inspection, we handle every stage of the manufacturing process under one roof.</p>
             </div>
           </div>
         </div>
@@ -928,8 +921,8 @@
             <div class="big-label">Cities<br>Covered</div>
           </div>
           <div class="why-stat-card">
-            <div style="font-family:'Barlow Condensed',sans-serif; font-size:18px; font-weight:800; text-transform:uppercase; color:var(--text); line-height:1.2;">Ready to start<br>your project?</div>
-            <a href="#contact" class="btn btn-primary" style="padding:12px 24px; font-size:13px; margin-left:auto;">
+            <div class="why-cta-text">Ready to start<br>your project?</div>
+            <a href="#contact" class="btn btn-primary">
               Contact Us
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
             </a>
