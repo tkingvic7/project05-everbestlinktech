@@ -580,6 +580,102 @@
       .strip-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
       .ht-main { font-size: 80px; }
     }
+
+    /* ─── HOVER ANIMATIONS ─────────────────────────────── */
+    .btn { will-change: transform; }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(124,58,237,0.4);
+    }
+    .btn-outline:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(124,58,237,0.15);
+    }
+    .btn-ghost:hover { transform: translateY(-2px); }
+    .btn-wa:hover { transform: translateY(-2px); }
+    .btn-white:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+    .btn-white-outline:hover { transform: translateY(-2px); }
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(124,58,237,0.4);
+    }
+
+    .service-card {
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .service-card:hover { transform: translateY(-5px); }
+
+    .why-item {
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .why-item:hover { transform: translateY(-3px); }
+
+    .why-stat-card {
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .why-stat-card:not(.highlight):hover {
+      border-color: rgba(124,58,237,0.3);
+      box-shadow: 0 8px 28px rgba(124,58,237,0.1);
+      transform: translateY(-3px);
+    }
+    .why-stat-card.highlight:hover {
+      box-shadow: 0 10px 36px rgba(124,58,237,0.45);
+      transform: translateY(-3px);
+    }
+
+    .superdrill-block {
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .superdrill-block:hover {
+      border-color: rgba(124,58,237,0.3);
+      box-shadow: 0 8px 32px rgba(124,58,237,0.1);
+      transform: translateY(-3px);
+    }
+
+    .strip-stat { transition: background 0.3s, transform 0.3s; }
+    .strip-stat:hover { transform: translateY(-2px); }
+
+    .contact-item {
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .contact-item:hover {
+      border-color: rgba(124,58,237,0.25);
+      box-shadow: 0 6px 20px rgba(124,58,237,0.08);
+      transform: translateX(5px);
+    }
+
+    .pill {
+      transition: background 0.25s, transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+      cursor: default;
+    }
+    .pill:hover {
+      background: rgba(124,58,237,0.12);
+      border-color: rgba(124,58,237,0.45);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(124,58,237,0.15);
+    }
+
+    .about-badge-float {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .about-badge-float:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 14px 40px rgba(124,58,237,0.35);
+    }
+
+    .hero-stat-float {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hero-stat-float:hover {
+      transform: translateY(-6px) scale(1.04);
+      box-shadow: 0 28px 64px rgba(0,0,0,0.65), 0 0 0 1px rgba(124,58,237,0.4);
+    }
+
+    .industry-card { transition: transform 0.3s ease, border-color 0.3s, box-shadow 0.3s; }
   </style>
 </head>
 <body>
