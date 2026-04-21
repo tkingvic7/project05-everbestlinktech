@@ -413,7 +413,8 @@
 
     /* ─── WHY US ────────────────────────────────────────────── */
     #why { padding: 110px 0; background: var(--bg); }
-    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .why-head { margin-bottom: 48px; }
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
     .why-features { display: flex; flex-direction: column; gap: 16px; }
     .why-item {
       padding: 24px 28px; background: #ffffff;
@@ -879,12 +880,13 @@
   <!-- ── WHY US ──────────────────────────────────────────────── -->
   <section id="why">
     <div class="container">
+      <div class="why-head">
+        <span class="section-label">Why Everbest Link</span>
+        <h2 class="section-title">Built on<br><span>Trust &</span><br>Precision</h2>
+        <div class="divider"></div>
+      </div>
       <div class="why-grid">
-        <div>
-          <span class="section-label">Why Everbest Link</span>
-          <h2 class="section-title">Built on<br><span>Trust &</span><br>Precision</h2>
-          <div class="divider"></div>
-          <div class="why-features">
+        <div class="why-features">
             <div class="why-item">
               <div class="why-num">01</div>
               <div class="why-title">Experienced Team</div>
@@ -905,7 +907,6 @@
               <div class="why-title">End-to-End Solutions</div>
               <p class="why-desc">From mould design to final inspection, we handle every stage of the manufacturing process under one roof.</p>
             </div>
-          </div>
         </div>
         <div class="why-visual">
           <div class="why-stat-card highlight">
