@@ -153,6 +153,14 @@
       to   { transform: rotate(360deg); }
     }
 
+    /* Hero container — fill the dark left area, not the global centered container */
+    #hero > .container {
+      max-width: none;
+      width: 52%;
+      margin: 0;
+      padding: 0 clamp(28px, 5vw, 80px);
+    }
+
     /* Hero left content */
     .hero-content { position: relative; z-index: 2; max-width: 580px; }
     .hero-badge {
@@ -561,6 +569,7 @@
     /* ─── RESPONSIVE ────────────────────────────────────────── */
     @media (max-width: 1024px) {
       .hero-panel { display: none; }
+      #hero > .container { width: 100%; padding: 0 40px; }
       .about-grid, .why-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
       .services-head { grid-template-columns: 1fr; gap: 24px; }
       .industries-grid { grid-template-columns: repeat(3, 1fr); }
