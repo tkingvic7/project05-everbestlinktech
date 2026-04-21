@@ -70,12 +70,13 @@
       box-shadow: 0 2px 24px rgba(0,0,0,0.07);
     }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
-    .nav-logo-img {
-      height: 42px; width: auto; display: block;
-      filter: brightness(0) invert(1);
-      transition: filter 0.4s ease;
+    .nav-logo-text {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 22px; font-weight: 900; letter-spacing: 2px;
+      color: #ffffff; text-decoration: none;
+      transition: color 0.4s ease;
     }
-    nav.scrolled .nav-logo-img { filter: none; }
+    nav.scrolled .nav-logo-text { color: var(--purple); }
     .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
     .nav-links a {
       font-family: 'Barlow Condensed', sans-serif; font-size: 13px;
@@ -318,7 +319,7 @@
     /* ─── FOOTER ────────────────────────────────────────────── */
     footer { background: #1e1b2e; border-top: 1px solid rgba(124,58,237,0.2); }
     .footer-top { padding: 60px 0; display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 60px; }
-    .footer-logo-img { height: 36px; width: auto; display: block; margin-bottom: 20px; filter: brightness(0) invert(1); opacity: 0.7; }
+    .footer-logo-text { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 900; letter-spacing: 2px; color: rgba(255,255,255,0.7); display: block; margin-bottom: 20px; }
     .footer-brand p { font-size: 14px; color: rgba(255,255,255,0.4); line-height: 1.7; max-width: 320px; }
     .footer-col-title { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--purple); margin-bottom: 20px; }
     .footer-links { display: flex; flex-direction: column; gap: 10px; }
@@ -354,9 +355,7 @@
   <nav>
     <div class="container">
       <div class="nav-inner">
-        <a href="index.html">
-          <img src="logo.svg" alt="Everbest Link Technology" class="nav-logo-img" />
-        </a>
+        <a href="index.html" class="nav-logo-text">EVERBESTLINK</a>
         <ul class="nav-links">
           <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#services">Services</a></li>
@@ -611,7 +610,7 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <img src="logo.svg" alt="Everbest Link Technology" class="footer-logo-img" />
+          <span class="footer-logo-text">EVERBESTLINK</span>
           <p>Precision machining and tooling specialists serving the electronics, medical, automotive, oil & gas, and aerospace sectors across Penang and Kedah, Malaysia.</p>
         </div>
         <div>
